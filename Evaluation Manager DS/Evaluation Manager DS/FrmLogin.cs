@@ -9,9 +9,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Evaluation_Manager_DS {
-    public partial class Form1 : Form {
-        public Form1() {
+    public partial class FrmLogin : Form {
+        public FrmLogin() {
             InitializeComponent();
+        }
+
+        private void FrmLogin_Load(object sender, EventArgs e) {
+
         }
     }
 }
