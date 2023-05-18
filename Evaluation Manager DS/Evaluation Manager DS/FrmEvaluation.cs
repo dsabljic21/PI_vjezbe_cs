@@ -14,7 +14,7 @@ namespace Evaluation_Manager_DS {
     public partial class FrmEvaluation : Form {
         private Student student;
 
-        public Student SelectedStudent { get; private set; }
+        public Student SelectedStudent { get => student; set => student = value; }
 
         public FrmEvaluation(Models.Student selectedStudent) {
             InitializeComponent();
@@ -40,7 +40,7 @@ namespace Evaluation_Manager_DS {
            currentActivity.MaxPoints;
             // numPoints.Minimum = 0;
             // numPoints.Maximum = currentActivity.MaxPoints;
-            var evaluation = EvaluationRepository.GetEvaluation(student, currentActivity);
+            var evaluation = EvaluationRepository.GetEvaluation(SelectedStudent, currentActivity);
             if (evaluation != null) {
                 txtTeacher.Text = evaluation.Evaluator.ToString();
                 txtEvaluationDate.Text = evaluation.EvaluationDate.ToString();
