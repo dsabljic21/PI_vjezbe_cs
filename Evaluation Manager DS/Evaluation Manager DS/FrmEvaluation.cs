@@ -40,8 +40,7 @@ namespace Evaluation_Manager_DS {
            currentActivity.MaxPoints;
             // numPoints.Minimum = 0;
             // numPoints.Maximum = currentActivity.MaxPoints;
-            var evaluation =
- EvaluationRepository.GetEvaluation(SelectedStudent, currentActivity);
+            var evaluation = EvaluationRepository.GetEvaluation(student, currentActivity);
             if (evaluation != null) {
                 txtTeacher.Text = evaluation.Evaluator.ToString();
                 txtEvaluationDate.Text = evaluation.EvaluationDate.ToString();
